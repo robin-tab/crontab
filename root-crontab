@@ -1,0 +1,6 @@
+
+5	6,12,17		*	*	*	service bind9 restart	
+42 4 * * 6 /etc/webmin/package-updates/update.pl
+55 01 * * 2-6 /backups/fullbackup.sh
+0 5 * * * root /usr/bin/apt-get update && /usr/bin/apt-get upgrade -q -y >> /var/log/apt/autoupdates.log
+0 * * * * /etc/webmin/bandwidth/rotate.pl
